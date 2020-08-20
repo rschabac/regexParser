@@ -1,2 +1,5 @@
+open Ast
+open Regex
+
 let _main =
-	Sys.argv.(1) |> Lexing.from_string |> Parser.handleEOF Lexer.read
+	Sys.argv.(1) |> parse |> fully_parenthesized_string_of_regexpr |> print_endline

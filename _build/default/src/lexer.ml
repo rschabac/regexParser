@@ -1,9 +1,9 @@
-# 1 "lexer.mll"
+# 1 "src/lexer.mll"
  
 	open Parser
 	exception Error of string
 
-# 7 "lexer.ml"
+# 7 "src/lexer.ml"
 let __ocaml_lex_tables = {
   Lexing.lex_base =
    "\000\000\249\255\003\000\251\255\252\255\253\255\254\255\255\255\
@@ -101,39 +101,39 @@ let rec read lexbuf =
 and __ocaml_lex_read_rec lexbuf __ocaml_lex_state =
   match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
       | 0 ->
-# 9 "lexer.mll"
+# 9 "src/lexer.mll"
       ( UNION )
-# 107 "lexer.ml"
+# 107 "src/lexer.ml"
 
   | 1 ->
-# 10 "lexer.mll"
+# 10 "src/lexer.mll"
       ( LPAREN )
-# 112 "lexer.ml"
+# 112 "src/lexer.ml"
 
   | 2 ->
-# 11 "lexer.mll"
+# 11 "src/lexer.mll"
       ( RPAREN )
-# 117 "lexer.ml"
+# 117 "src/lexer.ml"
 
   | 3 ->
-# 12 "lexer.mll"
+# 12 "src/lexer.mll"
       ( STAR )
-# 122 "lexer.ml"
+# 122 "src/lexer.ml"
 
   | 4 ->
-# 13 "lexer.mll"
+# 13 "src/lexer.mll"
       ( EPSILON )
-# 127 "lexer.ml"
+# 127 "src/lexer.ml"
 
   | 5 ->
-# 14 "lexer.mll"
+# 14 "src/lexer.mll"
              ( STR (Lexing.lexeme lexbuf) )
-# 132 "lexer.ml"
+# 132 "src/lexer.ml"
 
   | 6 ->
-# 15 "lexer.mll"
+# 15 "src/lexer.mll"
       ( EOF )
-# 137 "lexer.ml"
+# 137 "src/lexer.ml"
 
   | __ocaml_lex_state -> lexbuf.Lexing.refill_buff lexbuf;
       __ocaml_lex_read_rec lexbuf __ocaml_lex_state
