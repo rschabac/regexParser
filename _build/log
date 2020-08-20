@@ -1,0 +1,16 @@
+# dune build main.exe
+# OCAMLPARAM: unset
+$ /usr/bin/nproc > /tmp/dunea4adf9.output 2> /dev/null
+$ /home/rschabac/.opam/4.06.1/bin/ocamlc.opt -config > /tmp/dune001b08.output
+$ (cd _build/default && /home/rschabac/.opam/4.06.1/bin/ocamldep.opt -modules -impl src/lexer.ml) > _build/default/src/.main.eobjs/lexer.ml.d
+$ (cd _build/default && /home/rschabac/.opam/4.06.1/bin/ocamldep.opt -modules -impl src/parser.ml) > _build/default/src/.main.eobjs/parser.ml.d
+$ (cd _build/default && /home/rschabac/.opam/4.06.1/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.main.eobjs -no-alias-deps -opaque -o src/.main.eobjs/ast.cmo -c -impl src/ast.ml)
+$ (cd _build/default && /home/rschabac/.opam/4.06.1/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.main.eobjs -no-alias-deps -opaque -o src/.main.eobjs/parser.cmi -c -intf src/parser.mli)
+$ (cd _build/default && /home/rschabac/.opam/4.06.1/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.main.eobjs -no-alias-deps -opaque -o src/.main.eobjs/lexer.cmo -c -impl src/lexer.ml)
+$ (cd _build/default && /home/rschabac/.opam/4.06.1/bin/ocamlopt.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.main.eobjs -intf-suffix .ml -no-alias-deps -opaque -o src/.main.eobjs/ast.cmx -c -impl src/ast.ml)
+$ (cd _build/default && /home/rschabac/.opam/4.06.1/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.main.eobjs -no-alias-deps -opaque -o src/.main.eobjs/main.cmo -c -impl src/main.ml)
+> File "src/main.ml", line 1, characters 0-8:
+> Error (warning 33): unused open Ast.
+[2]
+$ (cd _build/default && /home/rschabac/.opam/4.06.1/bin/ocamlopt.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.main.eobjs -intf-suffix .ml -no-alias-deps -opaque -o src/.main.eobjs/parser.cmx -c -impl src/parser.ml)
+$ (cd _build/default && /home/rschabac/.opam/4.06.1/bin/ocamlopt.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.main.eobjs -intf-suffix .ml -no-alias-deps -opaque -o src/.main.eobjs/lexer.cmx -c -impl src/lexer.ml)
