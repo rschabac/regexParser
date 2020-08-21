@@ -9,6 +9,7 @@ type token =
   | LPAREN
   | EPSILON
   | EOF
+  | DOT
 
 (* This exception is raised by the monolithic API functions. *)
 

@@ -3,9 +3,10 @@
 	exception Error of string
 }
 
-let nonSpecial = [^'U' '(' ')' '*' 'e']+
+let nonSpecial = [^'U' '(' ')' '*' 'e' '.']+
 
 rule read = parse
+| "."	{ DOT }
 | "U"	{ UNION }
 | "("	{ LPAREN }
 | ")"	{ RPAREN }

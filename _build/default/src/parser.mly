@@ -8,28 +8,24 @@ open Ast
 %token STAR
 %token EPSILON
 %token EOF
+%token DOT
 %token <string> STR
 
 %start <Ast.regexpr> handleEOF
 
 %right UNION
+%right DOT
 %nonassoc STAR
 
 %%
 
 handleEOF:
-| e = concat; EOF	{ e }
-
-concat:
-| rList = nonempty_list(regexpr) { match rList with
-	| [] -> failwith "not possible"
-	| [r] -> r
-	| h::tl -> List.fold_left (fun a b -> Concat(a,b)) h tl
-}
+| e = regexpr; EOF	{ e }
 
 regexpr:
 | EPSILON	{ Epsilon }
 | s = STR	{ String s }
 | r1 = regexpr; UNION; r2 = regexpr		{ Union(r1, r2) }
 | r = regexpr; STAR		{ Star r }
-| LPAREN; c = concat; RPAREN	{ c }
+| r1 = regexpr; DOT; r2 = regexpr	{ Concat(r1, r2) }
+| LPAREN; r = regexpr; RPAREN	{ r }
