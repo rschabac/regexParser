@@ -1,3 +1,5 @@
 https://graphs.grevian.org/example
 https://en.wikipedia.org/wiki/DOT_(graph_description_language)
+http://magjac.com/graphviz-visual-editor/
 
+add option for "rankdir=LR;"
