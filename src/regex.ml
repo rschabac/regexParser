@@ -113,7 +113,7 @@ let dot_of_nfa nfa =
 	}
 	*)
 	let string_of_label : label -> string = function
-		| Eps -> "ε"
+		| Eps -> "epsilon"
 		| Chr c -> String.make 1 c
 	in
 	let edgeStr (i: int) (c: label) (target: int) : string =

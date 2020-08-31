@@ -1,9 +1,9 @@
 # dune build main.exe -j 16
 # OCAMLPARAM: unset
-$ /home/rschabac/.opam/4.06.1/bin/ocamlc.opt -config > /tmp/dunee1c0bd.output
+$ /home/rschabac/.opam/4.06.1/bin/ocamlc.opt -config > /tmp/dune808eaa.output
 $ (cd _build/default && /home/rschabac/.opam/4.06.1/bin/ocamldep.opt -modules -impl src/regex.ml) > _build/default/src/.main.eobjs/regex.ml.d
 $ (cd _build/default && /home/rschabac/.opam/4.06.1/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.main.eobjs -no-alias-deps -opaque -o src/.main.eobjs/regex.cmo -c -impl src/regex.ml)
 $ (cd _build/default && /home/rschabac/.opam/4.06.1/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.main.eobjs -no-alias-deps -opaque -o src/.main.eobjs/main.cmo -c -impl src/main.ml)
-$ (cd _build/default && /home/rschabac/.opam/4.06.1/bin/ocamlopt.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.main.eobjs -intf-suffix .ml -no-alias-deps -opaque -o src/.main.eobjs/regex.cmx -c -impl src/regex.ml)
 $ (cd _build/default && /home/rschabac/.opam/4.06.1/bin/ocamlopt.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.main.eobjs -intf-suffix .ml -no-alias-deps -opaque -o src/.main.eobjs/main.cmx -c -impl src/main.ml)
+$ (cd _build/default && /home/rschabac/.opam/4.06.1/bin/ocamlopt.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.main.eobjs -intf-suffix .ml -no-alias-deps -opaque -o src/.main.eobjs/regex.cmx -c -impl src/regex.ml)
 $ (cd _build/default && /home/rschabac/.opam/4.06.1/bin/ocamlopt.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o src/main.exe src/.main.eobjs/ast.cmx src/.main.eobjs/parser.cmx src/.main.eobjs/lexer.cmx src/.main.eobjs/regex.cmx src/.main.eobjs/main.cmx)
