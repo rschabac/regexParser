@@ -2,4 +2,7 @@ https://graphs.grevian.org/example
 https://en.wikipedia.org/wiki/DOT_(graph_description_language)
 http://magjac.com/graphviz-visual-editor/
 
-add option for "rankdir=LR;"
+add dfa conversion
+add function to run dfa on string
+add function to run nfa on string
+add command-line option for "rankdir=LR;"
